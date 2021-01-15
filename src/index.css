@@ -121,3 +121,19 @@ header .logo {
 .tag.red {
     color: #ff3737;
 }
+
+@media only screen and (max-width: 435px) {
+    header {
+        display: block !important;
+    }
+
+    header .logo {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    header form, header .search {
+        text-align: center;
+    }
+}
+
