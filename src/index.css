@@ -130,10 +130,16 @@ header .logo {
     header .logo {
         text-align: center;
         margin-bottom: 1rem;
+        font-size: 18px;
     }
 
     header form, header .search {
         text-align: center;
     }
+
+    .search {
+        font-size: .5rem;
+    }
+
 }
 
