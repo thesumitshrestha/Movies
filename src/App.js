@@ -37,6 +37,9 @@ function App() {
     return (
         <>
             <header>
+                <div class="logo">
+                     Movies List
+                </div>
                 <form action="" onSubmit={handleOnSubmit}>
                     <input
                         className="search"
