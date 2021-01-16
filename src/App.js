@@ -17,7 +17,6 @@ function App() {
         fetch(API)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setMovies(data.results);
             });
     };
@@ -34,11 +33,24 @@ function App() {
     const handleOnChange = (e) => {
         setSearchTerm(e.target.value);
     };
+
+    const noMovie = () => {
+        return (
+            <>
+                <div className="text-center no-found">
+                    <h1> No Movies Found </h1>
+                    {/*<h4><em> Some of the famous movies </em></h4>*/}
+                </div>
+            </>
+        )
+    };
+
     return (
+
         <>
             <header>
-                <div class="logo">
-                     Movies List
+                <div className="logo">
+                    Movies List
                 </div>
                 <form action="" onSubmit={handleOnSubmit}>
                     <input
@@ -52,8 +64,10 @@ function App() {
             </header>
 
             <div className="movie-container">
-                {movies.length > 0 &&
-                movies.map((movie) => <Movie key={movie.id} {...movie}  />)}
+                {movies.length > 0 ?
+                    movies.map((movie) => <Movie key={movie.id}{...movie}  />) : noMovie()
+                }
+
             </div>
         </>
     );

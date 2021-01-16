@@ -46,7 +46,7 @@ header .logo {
 
 .movie-container {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-wrap: wrap;
 }
 
@@ -103,6 +103,14 @@ header .logo {
     font-weight: 700;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.no-found{
+    width: 100%;
+}
+
 .tag {
     background-color: #22254b;
     border-radius: 5px;
@@ -122,7 +130,7 @@ header .logo {
     color: #ff3737;
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 767px) {
     header {
         display: block !important;
     }
@@ -139,6 +147,10 @@ header .logo {
 
     .search {
         font-size: 12px;
+    }
+
+    .movie-container{
+        justify-content: center;
     }
 
 }
